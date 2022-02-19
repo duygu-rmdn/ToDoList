@@ -2,9 +2,9 @@ C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\bin\De
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\bin\Debug\ToDoList.exe
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\bin\Debug\ToDoList.pdb
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.csprojAssemblyReference.cache
-C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.Form1.resources
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.Properties.Resources.resources
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.GenerateResource.cache
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.csproj.CoreCompileInputs.cache
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.exe
 C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.pdb
+C:\Users\VikiPC\Desktop\visual studio\Personal\_GitHub_\ToDoList\ToDoList\obj\Debug\ToDoList.toDoApp.resources

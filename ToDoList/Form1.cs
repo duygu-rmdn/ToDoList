@@ -7,69 +7,80 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ToDoList
 {
-    public partial class Form1 : Form
+    public partial class toDoApp : Form
     {
-        public Form1()
+        public toDoApp()
         {
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        string[] todosDaily = new string[10];
+        string[] todosNotUrgent = new string[10];
+        string[] todosWeekly = new string[10];
+        int d = 0; int u = 0; int w = 0;
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
-
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)//close
         {
             this.Close();
         }
-
-        private void checkButton_Click(object sender, EventArgs e)//checkButton e imeto na butona "check"
+        private void button3_Click(object sender, EventArgs e)//weeklyInsert
         {
-            if(checkBox1.Checked && checkBox2.Checked && checkBox3.Checked && checkBox4.Checked && checkBox5.Checked && checkBox6.Checked)
-            {
-                label1.Text = ("Done!");
-            }
-            else
-            {
-                label1.Text = ("Not done!");
-            }
+            weeklyTasks.Items.Add(textBox1.Text);
 
-            if (checkBox7.Checked && checkBox8.Checked && checkBox9.Checked && checkBox10.Checked && checkBox11.Checked && checkBox12.Checked)
-            {
-                label2.Text = ("Done!");
-            }
-            else
-            {
-                label2.Text = ("Not done!");
-            }
-
-            if (checkBox13.Checked && checkBox14.Checked && checkBox15.Checked && checkBox16.Checked && checkBox17.Checked && checkBox18.Checked)
-            {
-                label3.Text = ("Done!");
-            }
-            else
-            {
-                label3.Text = ("Not done!");
-            }
+            textBox1.Clear();
         }
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        private void dailyInsert_Click(object sender, EventArgs e)
+        {
+            dailyTasks.Items.Add(textBox1.Text);
+            textBox1.Clear();
+        }
+
+        private void button4_Click(object sender, EventArgs e)//notUrgInsert
+        {
+            notUrgent.Items.Add(textBox1.Text);
+
+            textBox1.Clear();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void dailyTasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void weeklyTasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            dailyTasks.Items.Clear();
+            weeklyTasks.Items.Clear();
+            notUrgent.Items.Clear();
         }
     }
 }
