@@ -37,17 +37,15 @@ namespace ToDoList
 
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)//close
         {
             this.Close();
         }
         private void button3_Click(object sender, EventArgs e)//weeklyInsert
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                weeklyTasks.Items.Add(textBox1.Text);
+                checkedListBox2.Items.Add(textBox1.Text.Trim());
             }
 
             textBox1.Clear();
@@ -55,19 +53,19 @@ namespace ToDoList
 
         private void dailyInsert_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                dailyTasks.Items.Add(textBox1.Text);
+                checkedListBox1.Items.Add(textBox1.Text.Trim());
             }
-
+            
             textBox1.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)//notUrgInsert
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                notUrgent.Items.Add(textBox1.Text);
+                checkedListBox3.Items.Add(textBox1.Text.Trim());
             }
 
             textBox1.Clear();
@@ -76,21 +74,53 @@ namespace ToDoList
         {
 
         }
-        private void dailyTasks_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void toDoApp_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            for (int i = checkedListBox2.Items.Count - 1; i >= 0; i--)
+            {
+                if (checkedListBox2.GetItemChecked(i))
+                {
+                    checkedListBox2.Items.Remove(checkedListBox2.Items[i]);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = checkedListBox1.Items.Count - 1; i >= 0; i--)
+            {
+                if (checkedListBox1.GetItemChecked(i))
+                {
+                    checkedListBox1.Items.Remove(checkedListBox1.Items[i]);
+                }
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            for (int i = checkedListBox3.Items.Count - 1; i >= 0; i--)
+            {
+                if (checkedListBox3.GetItemChecked(i))
+                {
+                    checkedListBox3.Items.Remove(checkedListBox3.Items[i]);
+                }
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void weeklyTasks_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            dailyTasks.Items.Clear();
-            weeklyTasks.Items.Clear();
-            notUrgent.Items.Clear();
         }
     }
 }
