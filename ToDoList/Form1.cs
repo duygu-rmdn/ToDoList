@@ -45,20 +45,30 @@ namespace ToDoList
         }
         private void button3_Click(object sender, EventArgs e)//weeklyInsert
         {
-            weeklyTasks.Items.Add(textBox1.Text);
+            if (textBox1.Text != "")
+            {
+                weeklyTasks.Items.Add(textBox1.Text);
+            }
 
             textBox1.Clear();
         }
 
         private void dailyInsert_Click(object sender, EventArgs e)
         {
-            dailyTasks.Items.Add(textBox1.Text);
+            if (textBox1.Text != "")
+            {
+                dailyTasks.Items.Add(textBox1.Text);
+            }
+
             textBox1.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)//notUrgInsert
         {
-            notUrgent.Items.Add(textBox1.Text);
+            if (textBox1.Text != "")
+            {
+                notUrgent.Items.Add(textBox1.Text);
+            }
 
             textBox1.Clear();
         }
