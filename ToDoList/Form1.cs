@@ -45,9 +45,9 @@ namespace ToDoList
         }
         private void button3_Click(object sender, EventArgs e)//weeklyInsert
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                weeklyTasks.Items.Add(textBox1.Text);
+                weeklyTasks.Items.Add("- " + textBox1.Text.Trim());
             }
 
             textBox1.Clear();
@@ -55,9 +55,9 @@ namespace ToDoList
 
         private void dailyInsert_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                dailyTasks.Items.Add(textBox1.Text);
+                dailyTasks.Items.Add("- " + textBox1.Text.Trim());
             }
 
             textBox1.Clear();
@@ -65,9 +65,9 @@ namespace ToDoList
 
         private void button4_Click(object sender, EventArgs e)//notUrgInsert
         {
-            if (textBox1.Text != "")
+            if (textBox1.Text.Trim() != "")
             {
-                notUrgent.Items.Add(textBox1.Text);
+                notUrgent.Items.Add("- " + textBox1.Text.Trim());
             }
 
             textBox1.Clear();
@@ -86,11 +86,34 @@ namespace ToDoList
 
         }
 
-        private void Clear_Click(object sender, EventArgs e)
+        private void toDoApp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notUrgent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            weeklyTasks.Items.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             dailyTasks.Items.Clear();
-            weeklyTasks.Items.Clear();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
             notUrgent.Items.Clear();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
