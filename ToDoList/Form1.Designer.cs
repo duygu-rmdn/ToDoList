@@ -37,12 +37,9 @@ namespace ToDoList
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dailyTasks = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.weeklyTasks = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.notUrgent = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dailyInsert = new System.Windows.Forms.Button();
@@ -54,6 +51,9 @@ namespace ToDoList
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,7 +62,7 @@ namespace ToDoList
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.groupBox1.Controls.Add(this.dailyTasks);
+            this.groupBox1.Controls.Add(this.checkedListBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
             this.groupBox1.Location = new System.Drawing.Point(33, 191);
@@ -75,25 +75,10 @@ namespace ToDoList
             this.groupBox1.Text = "Daily Tasks";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // dailyTasks
-            // 
-            this.dailyTasks.BackColor = System.Drawing.Color.LavenderBlush;
-            this.dailyTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dailyTasks.ForeColor = System.Drawing.Color.Navy;
-            this.dailyTasks.FormattingEnabled = true;
-            this.dailyTasks.HorizontalScrollbar = true;
-            this.dailyTasks.ItemHeight = 20;
-            this.dailyTasks.Location = new System.Drawing.Point(27, 33);
-            this.dailyTasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dailyTasks.Name = "dailyTasks";
-            this.dailyTasks.Size = new System.Drawing.Size(169, 240);
-            this.dailyTasks.TabIndex = 0;
-            this.dailyTasks.SelectedIndexChanged += new System.EventHandler(this.dailyTasks_SelectedIndexChanged);
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LavenderBlush;
-            this.groupBox2.Controls.Add(this.weeklyTasks);
+            this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.ForeColor = System.Drawing.Color.Navy;
@@ -106,21 +91,6 @@ namespace ToDoList
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Weekly Tasks";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // weeklyTasks
-            // 
-            this.weeklyTasks.BackColor = System.Drawing.Color.LavenderBlush;
-            this.weeklyTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.weeklyTasks.ForeColor = System.Drawing.Color.Navy;
-            this.weeklyTasks.FormattingEnabled = true;
-            this.weeklyTasks.HorizontalScrollbar = true;
-            this.weeklyTasks.ItemHeight = 20;
-            this.weeklyTasks.Location = new System.Drawing.Point(29, 33);
-            this.weeklyTasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.weeklyTasks.Name = "weeklyTasks";
-            this.weeklyTasks.Size = new System.Drawing.Size(169, 240);
-            this.weeklyTasks.TabIndex = 1;
-            this.weeklyTasks.SelectedIndexChanged += new System.EventHandler(this.weeklyTasks_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -135,34 +105,19 @@ namespace ToDoList
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.groupBox3.Controls.Add(this.notUrgent);
+            this.groupBox3.Controls.Add(this.checkedListBox3);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox3.Location = new System.Drawing.Point(544, 191);
+            this.groupBox3.Location = new System.Drawing.Point(537, 191);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(228, 332);
+            this.groupBox3.Size = new System.Drawing.Size(235, 332);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Not urgent ";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // notUrgent
-            // 
-            this.notUrgent.BackColor = System.Drawing.Color.LavenderBlush;
-            this.notUrgent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.notUrgent.ForeColor = System.Drawing.Color.Navy;
-            this.notUrgent.FormattingEnabled = true;
-            this.notUrgent.HorizontalScrollbar = true;
-            this.notUrgent.ItemHeight = 20;
-            this.notUrgent.Location = new System.Drawing.Point(31, 33);
-            this.notUrgent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.notUrgent.Name = "notUrgent";
-            this.notUrgent.Size = new System.Drawing.Size(169, 240);
-            this.notUrgent.TabIndex = 2;
-            this.notUrgent.SelectedIndexChanged += new System.EventHandler(this.notUrgent_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -221,7 +176,7 @@ namespace ToDoList
             this.notUrgInsert.BackColor = System.Drawing.Color.Pink;
             this.notUrgInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.notUrgInsert.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notUrgInsert.Location = new System.Drawing.Point(544, 530);
+            this.notUrgInsert.Location = new System.Drawing.Point(537, 530);
             this.notUrgInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.notUrgInsert.Name = "notUrgInsert";
             this.notUrgInsert.Size = new System.Drawing.Size(116, 34);
@@ -261,10 +216,10 @@ namespace ToDoList
             this.button3.BackColor = System.Drawing.Color.Thistle;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(668, 531);
+            this.button3.Location = new System.Drawing.Point(661, 531);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 33);
+            this.button3.Size = new System.Drawing.Size(111, 33);
             this.button3.TabIndex = 11;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = false;
@@ -307,12 +262,43 @@ namespace ToDoList
             this.label4.TabIndex = 14;
             this.label4.Text = "write your task here:";
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(7, 33);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(202, 273);
+            this.checkedListBox1.TabIndex = 17;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.BackColor = System.Drawing.Color.LavenderBlush;
+            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(16, 33);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(202, 273);
+            this.checkedListBox2.TabIndex = 18;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(16, 33);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(202, 273);
+            this.checkedListBox3.TabIndex = 19;
+            // 
             // toDoApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(802, 603);
+            this.ClientSize = new System.Drawing.Size(802, 653);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
@@ -352,14 +338,14 @@ namespace ToDoList
         private Button weeklyInsert;
         private Button notUrgInsert;
         private TextBox textBox1;
-        private ListBox dailyTasks;
-        private ListBox weeklyTasks;
-        private ListBox notUrgent;
         private Button button2;
         private Button button3;
         private Button button4;
         private Label label2;
         private Label label4;
+        private CheckedListBox checkedListBox1;
+        private CheckedListBox checkedListBox2;
+        private CheckedListBox checkedListBox3;
     }
 }
 
